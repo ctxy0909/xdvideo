@@ -1,7 +1,7 @@
 package com.xdclass.xdvideo.mapper;
 
-import com.xdclass.xdvideo.domain.Video;
 import com.xdclass.xdvideo.provider.VideoProvider;
+import com.xdclass.xdvideo.domain.Video;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

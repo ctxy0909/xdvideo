@@ -6,7 +6,18 @@
 	<groupId>com.xdclass</groupId>
 	<artifactId>xdvideo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+
+    <modules>
+        <module>web</module>
+        <module>service</module>
+		<module>domain</module>
+	</modules>
+	<!--模型层：model
+		持久层：service
+		表示层：web
+	-->
+	<!--web层依赖持久层service，持久层service依赖模型层modle-->
+    <packaging>pom</packaging>
 
 	<name>xdvideo</name>
 	<description>Demo project for Spring Boot</description>

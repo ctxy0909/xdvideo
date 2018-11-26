@@ -2,8 +2,8 @@ package com.xdclass.xdvideo.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.xdclass.xdvideo.domain.Video;
 import com.xdclass.xdvideo.service.VideoService;
+import com.xdclass.xdvideo.domain.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

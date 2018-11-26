@@ -12,7 +12,7 @@ public class CommonTest {
         user.setId(999);
         user.setHeadImg("www.xdclass.net");
         user.setName("xdclass");
-        String token=JwtUtils.geneJsonWebToken(user);
+        String token= JwtUtils.geneJsonWebToken(user);
         System.out.println(token);
     }
     /**
