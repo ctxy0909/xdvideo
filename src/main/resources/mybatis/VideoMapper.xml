@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xdclass.xdvideo.mapper.VideoMapper">
+
+	<select id="findAll"  resultType="com.xdclass.xdvideo.domain.Video" >
+		select * from video
+	</select>
+
+    <!--<select id="findByIds"  resultType="com.zmkj.wnlt.domain.Phone"   parameterType="com.zmkj.wnlt.domain.Phone">
+		select * from phone where 1=1
+		and del_flag = 'N'
+		<if test="dhh!= null and dhh != ''">and dhh like concat('%', #{dhh}, '%')</if>
+		<if test="tclx!= null and tclx != ''">and tclx = #{tclx}</if>
+
+	</select>-->
+
+
+</mapper>
