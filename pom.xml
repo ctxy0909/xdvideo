@@ -11,10 +11,12 @@
         <module>web</module>
         <module>service</module>
 		<module>domain</module>
-	</modules>
+        <module>common</module>
+    </modules>
 	<!--模型层：model
 		持久层：service
 		表示层：web
+		公共配置模块:common
 	-->
 	<!--web层依赖持久层service，持久层service依赖模型层modle-->
     <packaging>pom</packaging>
