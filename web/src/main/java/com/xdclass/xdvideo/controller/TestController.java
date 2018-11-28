@@ -26,8 +26,8 @@ public class TestController {
 	@RequestMapping("test_config")
 	public JsonData testConfig(){
 
-		System.out.println(weChatConfig.getAppId());
-		return JsonData.buildSuccess(weChatConfig.getAppId());
+		System.out.println(weChatConfig.getOpenAppid());
+		return JsonData.buildSuccess(weChatConfig.getOpenAppid());
 	}
 	/*public String testConfig(){
 

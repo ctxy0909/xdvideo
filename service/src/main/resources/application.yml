@@ -1,0 +1,71 @@
+#=============================开发环境配置==========
+#==============================数据库相关配置=================================
+#激活环境
+spring:
+  profiles:
+    active: test
+    # datasource:
+    #   type: com.alibaba.druid.pool.DruidDataSource
+    #  driver-class-name: com.mysql.jdbc.Driver
+    #  url: jdbc:mysql://111.231.205.74:3306/xdclass?useUnicode=true&characterEncoding=utf-8
+    #  username: root
+  #  password: 123456
+
+---
+#开发环境配置
+spring:
+  profiles: dev
+server:
+  port: 8080
+
+
+---
+#测试环境配置
+spring:
+  profiles: test
+server:
+  port: 9980
+
+
+---
+#生产环境配置
+spring:
+  profiles: prod
+server:
+  port: 80
+
+
+
+
+
+
+
+
+#=================================微信相关====================================
+#公众号
+#微信开放平台配置
+  #wxpay:
+  #appid: wxa7b52251a97235ea
+  #appsecret: a2049e04335797f05af4c32a3ef65db7
+
+  #wxopen:
+  #appid: wx025575eac69a2d5b
+  #appsecret: f5b6730c592ac15b8b1a5aeb8948a9f3
+  #redirect_url: http://16webtest.tunnel.qydev.com/api/v1/wechat1/user/callback
+
+
+# 搜索指定包别名
+# 配置mapper的扫描，找到所有的mapper.xml映射文件
+#下划线转驼峰配置,两者都可以
+#打印sql，方便调试
+#mybatis:
+  #  type-aliases-package: com.xdclass.xdvideo.xdvideo
+  # mapper-locations: classpath:mybatis/*Mapper.xml
+    # configuration:
+    #  map-underscore-to-camel-case: true
+  #  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
+

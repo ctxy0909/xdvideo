@@ -10,19 +10,11 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 //在哪里读取
 @PropertySource(value = "classpath:application.properties")
+
+
 public class WeChatConfig {
     //映射配置文件里的值
-    /**
-     * 公众号appid
-     */
-    @Value("${wxpay.appid}")
-    private String appId;
 
-    /**
-     * 公众号秘钥
-     */
-    @Value("${wxpay.appsecret}")
-    private String appsecret;
 
 
     /**
@@ -79,19 +71,5 @@ public class WeChatConfig {
         this.openRedirectUrl = openRedirectUrl;
     }
 
-    public String getAppId() {
-        return appId;
-    }
 
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
-
-    public String getAppsecret() {
-        return appsecret;
-    }
-
-    public void setAppsecret(String appsecret) {
-        this.appsecret = appsecret;
-    }
 }
