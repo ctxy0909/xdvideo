@@ -11,10 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ThymeleafController {
 
-    @RequestMapping("/index")
-    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
+
+    @RequestMapping("/login")
+    public String login(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
         return "login";
+    }
+
+    @RequestMapping("/index")
+    public String index(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
+        model.addAttribute("name", name);
+        return "index";
     }
 
 
