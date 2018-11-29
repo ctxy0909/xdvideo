@@ -1,102 +1,51 @@
 package com.xdclass.xdvideo.domain;
 
-
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * 用户实体类
+ * @author ct
+ * @Title: User
+ * @ProjectName demo2
+ * @Description: TODO
+ * @date 2018/11/18 18:25
  */
 public class User implements Serializable {
+    private  Integer uid;
+    private  String username;
+    private  String password;
+    private Set<Role> roles=new HashSet<>();
 
-  private Integer id;
-  private String openid;
-  private String name;
-  private String headImg;
-  private String phone;
-  private String sign;
-  private Integer sex;
-  private String city;
-  private java.util.Date createTime;
+    public Integer getUid() {
+        return uid;
+    }
 
+    public void setUid(Integer uid) {
+        this.uid = uid;
+    }
 
-  public Integer getId() {
-    return id;
-  }
+    public String getUsername() {
+        return username;
+    }
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
+    public String getPassword() {
+        return password;
+    }
 
-  public String getOpenid() {
-    return openid;
-  }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-  public void setOpenid(String openid) {
-    this.openid = openid;
-  }
+    public Set<Role> getRoles() {
+        return roles;
+    }
 
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  public String getHeadImg() {
-    return headImg;
-  }
-
-  public void setHeadImg(String headImg) {
-    this.headImg = headImg;
-  }
-
-
-  public String getPhone() {
-    return phone;
-  }
-
-  public void setPhone(String phone) {
-    this.phone = phone;
-  }
-
-
-  public String getSign() {
-    return sign;
-  }
-
-  public void setSign(String sign) {
-    this.sign = sign;
-  }
-
-
-  public Integer getSex() {
-    return sex;
-  }
-
-  public void setSex(Integer sex) {
-    this.sex = sex;
-  }
-
-
-  public String getCity() {
-    return city;
-  }
-
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-
-  public java.util.Date getCreateTime() {
-    return createTime;
-  }
-
-  public void setCreateTime(java.util.Date createTime) {
-    this.createTime = createTime;
-  }
-
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

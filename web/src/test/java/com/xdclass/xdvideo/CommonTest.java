@@ -1,6 +1,6 @@
 package com.xdclass.xdvideo;
 
-import com.xdclass.xdvideo.domain.User;
+import com.xdclass.xdvideo.domain.WxUser;
 import com.xdclass.xdvideo.utils.JwtUtils;
 import io.jsonwebtoken.Claims;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.junit.Test;
 public class CommonTest {
     @Test
     public void testGeneJwt(){
-        User user=new User();
+        WxUser user=new WxUser();
         user.setId(999);
         user.setHeadImg("www.xdclass.net");
         user.setName("xdclass");

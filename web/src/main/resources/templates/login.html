@@ -16,25 +16,25 @@
 <div class="login">
     <div class="message">登录</div>
     <div id="darkbannerwrap"></div>
-<form class="layui-form"  action="">
+<form class="layui-form"   method="post" th:action="@{/loginUser}" >
     <div class="layui-form-item">
         <label class="layui-form-label la">用户名</label>
         <div class="layui-input-block">
-            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入用户名"
+            <input type="text" name="username"  lay-verify="title"   autocomplete="off" placeholder="请输入用户名"
                    class="layui-input uname">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label la">密码</label>
         <div class="layui-input-block">
-            <input type="password" name="title" lay-verify="title" autocomplete="off" placeholder="请输入密码"
+            <input type="password" name="password" lay-verify="title" autocomplete="off" placeholder="请输入密码"
                    class="layui-input pword">
         </div>
     </div>
 
     <div class="layui-form-item">
         <div class="layui-input-block tj">
-            <button class="layui-btn bt" lay-submit="" lay-filter="demo1">立即提交</button>
+            <button class="layui-btn bt" lay-submit="" type="submit" lay-filter="demo1">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary bt">重置</button>
         </div>
     </div>
@@ -42,5 +42,10 @@
 </div>
 
 <script src="../static/layui/js/layui.js" th:src="@{/layui/js/layui.all.js}"></script>
+
+<script>
+
+
+</script>
 </body>
 </html>

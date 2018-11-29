@@ -1,6 +1,6 @@
 package com.xdclass.xdvideo.utils;
 
-import com.xdclass.xdvideo.domain.User;
+import com.xdclass.xdvideo.domain.WxUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -18,7 +18,7 @@ public class JwtUtils {
     //定义秘钥
     public static final String APPSECRET = "xd666";
 
-    public static String geneJsonWebToken(User user) {
+    public static String geneJsonWebToken(WxUser user) {
         /**
          * 生成jwt
          */

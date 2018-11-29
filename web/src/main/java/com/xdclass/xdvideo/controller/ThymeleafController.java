@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ThymeleafController {
 
 
-    @RequestMapping("/login")
+   /* @RequestMapping("/login")
     public String login(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
         return "login";
@@ -22,7 +22,7 @@ public class ThymeleafController {
     public String index(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
         return "index";
-    }
+    }*/
 
 
 }
