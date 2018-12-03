@@ -19,19 +19,34 @@ public class ShiroConfiguration {
     public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
         ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
         bean.setSecurityManager(manager);
-
+        // 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
         bean.setLoginUrl("/login");
+        // 登录成功后要跳转的链接
         bean.setSuccessUrl("/index");
-        bean.setUnauthorizedUrl("/unauthorized");
-
+        //未授权界面;
+        bean.setUnauthorizedUrl("/unauthorized403");
+        //拦截器.
         LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+
+        //需要登陆
         filterChainDefinitionMap.put("/index", "authc");
+        //放行
         filterChainDefinitionMap.put("/login", "anon");
+        filterChainDefinitionMap.put("/druid/**", "anon");
         filterChainDefinitionMap.put("/loginUser", "anon");
+        // 配置不会被拦截的链接 顺序判断
+        filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/admin", "roles[admin]");
         filterChainDefinitionMap.put("/edit", "perms[edit]");
-        filterChainDefinitionMap.put("/druid/**", "anon");
+
+        //<!-- 过滤链定义，从上向下顺序执行，一般将/**放在最为下边 -->:这是一个坑呢，一不小心代码就不好使了;
+        //<!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
+        //
+        // - anon:所有url都都可以匿名访问
+        //- authc: 需要认证才能进行访问
+        //- user:配置记住我或认证通过可以访问-->
         filterChainDefinitionMap.put("/**", "user");
+
         bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return bean;
